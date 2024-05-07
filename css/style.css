@@ -1,0 +1,109 @@
+/* http://meyerweb.com/eric/tools/css/reset/
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+
+html, body, div, span, applet, object, iframe, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    font-size: 100%;
+    font: inherit;
+    vertical-align: baseline;
+    font-family: 'Shantell Sans';
+    font-weight: 400;
+}
+
+
+/* ======================================================================================== */
+
+.bg-color {
+    background-color: #3d546c;
+}
+
+.b-img {
+    height: 100vh;
+    background: url('../images/background.jpg') center fixed;
+    -webkit-background-size: contain;
+    -moz-background-size: contain;
+    z-index: 0;
+}
+
+
+/* ======================================================================================== */
+
+#player, #computer, #com-score, #p-score {
+    font-size: 20px;
+    font-weight: 400;
+}
+
+#player {
+    color: #1f8151;
+}
+#computer {
+    color: #ebb612;
+}
+
+#rock, #paper, #scissors {
+    width: 186px;
+    height: 180px;
+}
+
+
+/* ======================================================================================== */
+
+.loader {
+    width: 48px;
+    height: 48px;
+    border-radius: 50%;
+    position: relative;
+    transform:rotate(45deg);
+    background: #fff;
+  }
+  .loader::before {
+    content: "";
+    box-sizing: border-box;
+    position: absolute;
+    inset: 0px;
+    border-radius: 50%;
+    border:24px solid #198754;
+    animation: prixClipFix 1500ms infinite linear;
+  }
+
+  @keyframes prixClipFix {
+      0%   {clip-path:polygon(50% 50%,0 0,0 0,0 0,0 0,0 0)}
+      25%  {clip-path:polygon(50% 50%,0 0,100% 0,100% 0,100% 0,100% 0)}
+      50%  {clip-path:polygon(50% 50%,0 0,100% 0,100% 100%,100% 100%,100% 100%)}
+      75%  {clip-path:polygon(50% 50%,0 0,100% 0,100% 100%,0 100%,0 100%)}
+      100% {clip-path:polygon(50% 50%,0 0,100% 0,100% 100%,0 100%,0 0)}
+  }
+
+
+
+/* ======================================================================================== */
+
+
+.win-result, .lose-result, .draw-result, .click-here, .game-over1, .game-over2 {
+    display: none;
+    opacity: 0;
+    transition: opacity 1s;
+}
+
+.win-result {
+    color: #198754;
+}
+
+.lose-result {
+    color: #ff5959;
+}
